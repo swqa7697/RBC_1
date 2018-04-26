@@ -20,19 +20,27 @@ public class Player: MonoBehaviour {
 
     private void Update()
     {
-//        transform.rotation = Quaternion.LookRotation(Vector3.forward, Vector3.up);
+        transform.rotation = Quaternion.LookRotation(Vector3.forward, Vector3.up);
         if (Input.GetKeyDown(KeyCode.Space))
             Jump();
     }
 
+	private void OnCollisionEnter(Collision other)
+	{
+//		if (other.gameObject.tag != "Player")  //The tag may be changed
+//		{
+			grounded = true;
+//		}
+	}
+
     private void Move()
     {
         Vector3 input = Vector3.zero;
-        if (Input.GetKey(KeyCode.LeftArrow))
-            input += Vector3.left;
-        if (Input.GetKey(KeyCode.RightArrow))
-            input += Vector3.right;
-
+		if (Input.GetKey (KeyCode.LeftArrow))
+			input += Vector3.left;
+		if (Input.GetKey (KeyCode.RightArrow))
+			input += Vector3.right;
+		
         input.Normalize();
 
         Vector3 newPosition = myRigidbody.position + input * mySpeed * Time.deltaTime;
