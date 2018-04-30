@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Standable
+  - Player1
+  - Player2
+  - Wall
   layers:
   - Default
   - TransparentFX

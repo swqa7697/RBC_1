@@ -23,6 +23,9 @@ public class Player: MonoBehaviour {
 //        transform.rotation = Quaternion.LookRotation(Vector3.forward, Vector3.up);
         if (Input.GetKeyDown(KeyCode.Space))
             Jump();
+
+        if (Input.GetKeyDown(KeyCode.RightShift))
+            Want_Stretch();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -61,4 +64,11 @@ public class Player: MonoBehaviour {
             grounded = false;
         }
     }
+
+    void Want_Stretch()
+    {
+        //Debug.Log("sending message");
+        gameObject.SendMessageUpwards("RequestStretch", 1.0f);
+    }
+
 }
