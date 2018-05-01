@@ -6,10 +6,14 @@ public class Button : MonoBehaviour {
 
 	private GameObject Door;
 
+    public SpriteRenderer spriteRenderer;
+    public Sprite[] sprites;
+
 	public bool open = false;
 
 	void Start () {
 		Door = GameObject.FindGameObjectWithTag ("door");
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 	}
 
 	void FixedUpdate (){
@@ -25,10 +29,12 @@ public class Button : MonoBehaviour {
 	}
 
 	void OnTriggerStay2D(Collider2D col){
+        spriteRenderer.sprite = sprites[1];
 		open = true;
 	}
 
 	void OnTriggerExit2D(Collider2D col){
+        spriteRenderer.sprite = sprites[0];
 		open = false;
 	}
 }
