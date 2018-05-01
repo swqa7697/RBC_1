@@ -1,6 +1,6 @@
 WindowsStandalone
 PlayerPath?
-C:/Users/Owner/Desktop/RBC 1/attemptOneBillionAndTwo.exe
+C:/Users/Owner/Desktop/RBC 1/106test.exe
 SceneListBegin?
 Assets/Scenes/Level 1.unity
 Assets/Scenes/Level 2.unity
@@ -9,13 +9,15 @@ Assets/Scenes/Level 4.unity
 Assets/Scenes/Level 5.unity
 Assets/Scenes/Level 6.unity
 SceneListEnd?
+3e12c92a1b8c96518cba6ad3679339e1 Assembly-CSharp.dll:.levelManager
 322cb40e1e282f28af980cbef7922a90 UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsEventTracker
 dc07d7ad69b399a46e92c483bf1c04ca UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsTracker
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.GrabCheck
 d948dbe9508d70c0864e35da6d381d5d Assembly-CSharp.dll:.Button
-4739d22c998c42f32f104f6e6a012cb5 Assembly-CSharp.dll:.PlayerController
+6cc95ef4d4904056b09286d04aa6fd82 Assembly-CSharp.dll:.BoxGroundCheck
+4b5a74f13c2f551e8f8d1a8450f09c50 Assembly-CSharp.dll:.PlayerController
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.GroundCheck
 bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.AudioSpatializerMicrosoft
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
@@ -156,5 +158,5 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInput
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.levelManager
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.CanvScript
 4a2f338b513ae8ecde35520cfac7bbf3 Assembly-CSharp.dll:.winCondition
