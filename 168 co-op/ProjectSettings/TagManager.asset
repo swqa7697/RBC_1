@@ -8,6 +8,8 @@ TagManager:
   - door
   - exit
   - Network
+  - box
+  - stone_box
   layers:
   - Default
   - TransparentFX
@@ -47,4 +49,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 2424001393
+    locked: 0
+  - name: New Layer
+    uniqueID: 2145365269
     locked: 0

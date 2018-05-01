@@ -15,6 +15,8 @@ public class PlayerController : NetworkBehaviour {
     public Sprite localRed1;
     public Sprite localRed2;
 
+	private bool flipped = false;
+	public bool beingGrabbed = false;
 
 	//public GameObject GameOverUI;
 
@@ -24,9 +26,9 @@ public class PlayerController : NetworkBehaviour {
 
 	private Rigidbody2D rb2d;
 	public Rigidbody2D rb2db;
-	public GameObject box;
+	public GameObject obj;
 
-	// Use this for initialization
+
 	void Start () {
 		//GameOverUI.SetActive(false);
 		rb2d = gameObject.GetComponent<Rigidbody2D> ();
@@ -50,13 +52,37 @@ public class PlayerController : NetworkBehaviour {
         if (!isLocalPlayer)
             return;
 
-		float h = Input.GetAxis ("Horizontal");
-		if (grabbing == true) {
-			if (h > 0) {
-				h = 0;
+		if (beingGrabbed == false) {
+			float h = Input.GetAxis ("Horizontal");
+
+			if (grabbing == true) {
+				if (h > 0) {
+					if (flipped == false) {
+						h = 0;
+					}
+				}
+				if (h < 0) {
+					if (flipped == true) {
+						h = 0;
+					}
+				}
+				if (obj.CompareTag("stone_box")){
+					h = 0;
+				}
+			} 
+			else {
+				if (h < 0) {
+					transform.localEulerAngles = new Vector3(0,180,0);
+					flipped = true;
+				}
+				if (h > 0) {
+					transform.localEulerAngles = new Vector3(0,0,0);
+					flipped = false;
+				}
 			}
+			rb2d.velocity = new Vector2 (h * maxSpeed, rb2d.velocity.y);
 		}
-		rb2d.velocity = new Vector2 (h * maxSpeed, rb2d.velocity.y);
+
 
         if (grabbing == true)
         {
@@ -84,19 +110,29 @@ public class PlayerController : NetworkBehaviour {
 		if (Input.GetButtonDown ("Grab")) {
 			if (canGrab == true) {
 				grabbing = true;
-				//box.GetComponent<Rigidbody2D>().isKinematic = true;
-				box.transform.SetParent (gameObject.transform);
+
+				obj.transform.SetParent (gameObject.transform);
+				if (obj.CompareTag ("Player")) {
+					obj.GetComponent<Rigidbody2D>().isKinematic = true;
+					obj.GetComponent<PlayerController> ().beingGrabbed = true;
+				}
+
 			}
 		}
 		if (Input.GetButtonUp ("Grab")) {
 			grabbing = false;
-			box.transform.SetParent (null);
+			if (obj.CompareTag ("Player")) {
+				obj.GetComponent<Rigidbody2D>().isKinematic = false;
+				obj.GetComponent<PlayerController> ().beingGrabbed = false;
+			}
+			obj.transform.SetParent (null);
+
 
 		}
 	}
 
 	void OnCollisionEnter2D(Collision2D col){
-		//box.GetComponent<Rigidbody2D>().isKinematic = false;
+		//obj.GetComponent<Rigidbody2D>().isKinematic = false;
 	}
 
 }

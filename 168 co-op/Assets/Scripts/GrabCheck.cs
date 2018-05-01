@@ -13,7 +13,7 @@ public class GrabCheck : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D col){
 		player.canGrab = true;
 		if (player.grabbing == false) {
-			player.box = col.gameObject;
+			player.obj = col.gameObject;
 		}
 
 	}
