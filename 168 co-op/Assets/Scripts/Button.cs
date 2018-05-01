@@ -9,7 +9,7 @@ public class Button : MonoBehaviour {
     public SpriteRenderer spriteRenderer;
     public Sprite[] sprites;
 
-	public bool open = false;
+	public static bool open = false;
 
 	void Start () {
 		Door = GameObject.FindGameObjectWithTag ("door");
