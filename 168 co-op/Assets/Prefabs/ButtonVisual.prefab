@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4792367821425356}
   - component: {fileID: 212634066860236414}
   - component: {fileID: 60897914758089666}
-  - component: {fileID: 114346871095200740}
+  - component: {fileID: 114926158266902192}
   m_Layer: 0
   m_Name: ButtonVisual
   m_TagString: Untagged
@@ -36,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1884033050338092}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.514, y: 2.334, z: 0.221703}
+  m_LocalPosition: {x: -3.3661873, y: -0.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -72,7 +72,7 @@ PolygonCollider2D:
       - {x: 0.5, y: -0.32857144}
       - {x: 0.5, y: -0.071428575}
       - {x: 0.27142859, y: 0.32857144}
---- !u!114 &114346871095200740
+--- !u!114 &114926158266902192
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -80,14 +80,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1884033050338092}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ecd950ab4a09be4bbbe15526934b747, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a406f434b70ec14c9d89c2b33550207, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
   sprites:
   - {fileID: 21300084, guid: 704539685fd5fdd48ae9f654fe1f86be, type: 3}
   - {fileID: 21300068, guid: 704539685fd5fdd48ae9f654fe1f86be, type: 3}
-  open: 0
 --- !u!212 &212634066860236414
 SpriteRenderer:
   m_ObjectHideFlags: 1

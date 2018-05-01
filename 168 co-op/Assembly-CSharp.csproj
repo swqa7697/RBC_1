@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\CanvScript.cs" />
+     <Compile Include="Assets\disableButton.cs" />
      <Compile Include="Assets\levelManager.cs" />
      <Compile Include="Assets\Scripts\BoxGroundCheck.cs" />
      <Compile Include="Assets\Scripts\Button.cs" />
