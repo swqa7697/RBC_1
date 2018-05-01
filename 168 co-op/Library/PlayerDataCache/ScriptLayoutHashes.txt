@@ -1,16 +1,20 @@
 WindowsStandalone
 PlayerPath?
-C:/Users/Owner/Desktop/RBC 1/netSceneTest.exe
+C:/Users/Owner/Desktop/RBC 1/attemptOneBillionAndTwo.exe
 SceneListBegin?
 Assets/Scenes/Level 1.unity
 Assets/Scenes/Level 2.unity
+Assets/Scenes/Level 3.unity
+Assets/Scenes/Level 4.unity
+Assets/Scenes/Level 5.unity
+Assets/Scenes/Level 6.unity
 SceneListEnd?
 322cb40e1e282f28af980cbef7922a90 UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsEventTracker
 dc07d7ad69b399a46e92c483bf1c04ca UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsTracker
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.GrabCheck
-e48fb84dd7b8574e8ebba0dc04fba128 Assembly-CSharp.dll:.Button
+d948dbe9508d70c0864e35da6d381d5d Assembly-CSharp.dll:.Button
 4739d22c998c42f32f104f6e6a012cb5 Assembly-CSharp.dll:.PlayerController
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.GroundCheck
 bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.AudioSpatializerMicrosoft
