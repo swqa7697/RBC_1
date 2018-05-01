@@ -16,16 +16,9 @@ public class Button : MonoBehaviour {
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 	}
 
-	void FixedUpdate (){
-		if (open == true) {
-			Door.gameObject.SetActive (false);
-		} else {
-			Door.gameObject.SetActive (true);
-		}
-	}
-
 	void OnTriggerEnter2D(Collider2D col){
 		open = true;
+		Door.gameObject.transform.Translate(1f,0,0);
 	}
 
 	void OnTriggerStay2D(Collider2D col){
@@ -36,5 +29,6 @@ public class Button : MonoBehaviour {
 	void OnTriggerExit2D(Collider2D col){
         spriteRenderer.sprite = sprites[0];
 		open = false;
+		Door.gameObject.transform.Translate(-1f,0,0);
 	}
 }

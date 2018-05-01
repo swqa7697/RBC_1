@@ -73,7 +73,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1355184977850408}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -10.044, y: 1.943, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4339884286556334}
@@ -88,7 +88,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1956404969622718}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.073, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4260073774033610}
@@ -125,7 +125,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &61370982040876202
 BoxCollider2D:
@@ -139,7 +139,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.01875782, y: 0.02512753}
+  m_Offset: {x: -0.013884544, y: 0.02512753}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.478462, y: 0.4764429}
@@ -150,7 +150,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.49019623, y: 1.0666667}
+  m_Size: {x: 0.49994278, y: 1.0666667}
   m_EdgeRadius: 0
 --- !u!61 &61568999413462798
 BoxCollider2D:
@@ -164,7 +164,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.28191853, y: 0.031829596}
+  m_Offset: {x: 0.45790005, y: 0.031829596}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -175,7 +175,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.27246857, y: 0.7726455}
+  m_Size: {x: 0.33457947, y: 0.7726455}
   m_EdgeRadius: 0
 --- !u!61 &61967363967505266
 BoxCollider2D:
@@ -255,6 +255,8 @@ MonoBehaviour:
   grounded: 0
   canGrab: 0
   grabbing: 0
+  rb2db: {fileID: 0}
+  box: {fileID: 0}
 --- !u!114 &114381310172406700
 MonoBehaviour:
   m_ObjectHideFlags: 1

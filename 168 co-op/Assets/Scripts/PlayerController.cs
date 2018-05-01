@@ -23,13 +23,15 @@ public class PlayerController : NetworkBehaviour {
 	public bool grabbing = false;
 
 	private Rigidbody2D rb2d;
+	public Rigidbody2D rb2db;
+	public GameObject box;
 
 	// Use this for initialization
 	void Start () {
 		//GameOverUI.SetActive(false);
 		rb2d = gameObject.GetComponent<Rigidbody2D> ();
 		PSR = gameObject.GetComponent<SpriteRenderer>();
-        
+     
 	}
 
     public override void OnStartLocalPlayer()
@@ -49,17 +51,21 @@ public class PlayerController : NetworkBehaviour {
             return;
 
 		float h = Input.GetAxis ("Horizontal");
+		if (grabbing == true) {
+			if (h > 0) {
+				h = 0;
+			}
+		}
 		rb2d.velocity = new Vector2 (h * maxSpeed, rb2d.velocity.y);
 
         if (grabbing == true)
         {
             PSR.color = Color.black;
         }
-		//	PSR.sprite = PS [1];
-		//} else {
-		//	PSR.sprite = PS [0];
-		//}
-
+		if (grabbing == false)
+		{
+			PSR.color = Color.white;
+		}
 
 	}
 
@@ -74,16 +80,23 @@ public class PlayerController : NetworkBehaviour {
 				grounded = false;
 			}
 		}
-		//this is for grabbing        ############################################################
-		//if (Input.GetButtonDown ("Grab")) {
-		//	if (canGrab == true) {
-		//		grabbing = true;
-		//		
-		//	}
-		//}
-		//if (Input.GetButtonUp ("Grab")) {
-		//	grabbing = false;
-		//}
+
+		if (Input.GetButtonDown ("Grab")) {
+			if (canGrab == true) {
+				grabbing = true;
+				//box.GetComponent<Rigidbody2D>().isKinematic = true;
+				box.transform.SetParent (gameObject.transform);
+			}
+		}
+		if (Input.GetButtonUp ("Grab")) {
+			grabbing = false;
+			box.transform.SetParent (null);
+
+		}
+	}
+
+	void OnCollisionEnter2D(Collision2D col){
+		//box.GetComponent<Rigidbody2D>().isKinematic = false;
 	}
 
 }
