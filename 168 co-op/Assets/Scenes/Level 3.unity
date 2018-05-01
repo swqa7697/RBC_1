@@ -2078,6 +2078,53 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1001 &225618641
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4072381291297972, guid: 78796640211b0d74ba52c081659a5cf9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 520.32764
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072381291297972, guid: 78796640211b0d74ba52c081659a5cf9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 349.35458
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072381291297972, guid: 78796640211b0d74ba52c081659a5cf9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -5.3592067
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072381291297972, guid: 78796640211b0d74ba52c081659a5cf9, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072381291297972, guid: 78796640211b0d74ba52c081659a5cf9, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072381291297972, guid: 78796640211b0d74ba52c081659a5cf9, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072381291297972, guid: 78796640211b0d74ba52c081659a5cf9, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072381291297972, guid: 78796640211b0d74ba52c081659a5cf9, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 224271139621118304, guid: 78796640211b0d74ba52c081659a5cf9,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 78796640211b0d74ba52c081659a5cf9, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &656493520
 GameObject:
   m_ObjectHideFlags: 0
@@ -2170,7 +2217,7 @@ GameObject:
   - component: {fileID: 872045781}
   m_Layer: 0
   m_Name: Spawn Point
-  m_TagString: Untagged
+  m_TagString: EditorOnly
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2301,7 +2348,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4939426383755704, guid: de55e686be9afbd47ab13c51e2822dee, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114524903411908184, guid: de55e686be9afbd47ab13c51e2822dee,
         type: 2}
