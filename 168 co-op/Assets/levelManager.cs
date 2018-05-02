@@ -37,5 +37,33 @@ public class levelManager : MonoBehaviour {
             Debug.Log("Looped");
             p.transform.position = position;
         }
+
+        GameObject[] boxes = GameObject.FindGameObjectsWithTag("box");
+
+        foreach(GameObject b in boxes)
+        {
+            if(b.name.Contains("up"))
+            {
+                Vector3 b_position = GameObject.Find("Box Spawn (up)").transform.position;
+                b.transform.position = b_position;
+            }
+            else if(b.name.Contains("top"))
+            {
+                Vector3 b_position = GameObject.Find("Box Spawn (top)").transform.position;
+                b.transform.position = b_position;
+            }
+            else if(b.name.Contains("bot"))
+            {
+                Vector3 b_position = GameObject.Find("Box Spawn (bot)").transform.position;
+                b.transform.position = b_position;
+            }
+            else
+            {
+                Vector3 b_position = GameObject.FindGameObjectWithTag("BOX_SPAWN").transform.position;
+                b.transform.position = b_position;
+            }
+        }
+
+        
     }
 }

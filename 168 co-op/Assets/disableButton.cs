@@ -13,7 +13,10 @@ public class disableButton : MonoBehaviour {
 
     void Start()
     {
-        Door = GameObject.FindGameObjectWithTag("door");
+        if (this.gameObject.tag == "Respawn")
+            Door = GameObject.FindGameObjectWithTag("door2");
+        else
+            Door = GameObject.FindGameObjectWithTag("door");
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
 
