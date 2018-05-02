@@ -13,7 +13,7 @@ public class GrabCheck : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D col){
 		player.canGrab = true;
 		if (player.grabbing == false) {
-			if (col.gameObject.CompareTag ("box") || col.gameObject.CompareTag ("g_box") || col.gameObject.CompareTag ("stone_box") || col.gameObject.CompareTag ("Player")) {
+			if (col.gameObject.CompareTag ("box") || col.gameObject.CompareTag ("g_box") || col.gameObject.CompareTag ("stone_box")) {
 				player.obj = col.gameObject;
 			}
 
@@ -28,7 +28,7 @@ public class GrabCheck : MonoBehaviour {
 
 	void OnTriggerStay2D(Collider2D col){
 		player.canGrab = true;
-		if (col.gameObject.CompareTag ("box") || col.gameObject.CompareTag ("g_box") || col.gameObject.CompareTag ("stone_box") || col.gameObject.CompareTag ("Player")) {
+		if (col.gameObject.CompareTag ("box") || col.gameObject.CompareTag ("g_box") || col.gameObject.CompareTag ("stone_box")) {
 			player.obj = col.gameObject;
 		}
 	}

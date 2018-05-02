@@ -17,7 +17,7 @@ public class winCondition : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-		if(playerCount >= 1)
+		if(playerCount >= 2)
         {
             levelManager lev = GameObject.FindGameObjectWithTag("GameController").GetComponent<levelManager>();
             lev.loadScene(nextLevelName);

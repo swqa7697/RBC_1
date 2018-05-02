@@ -12,10 +12,7 @@ public class Button : MonoBehaviour {
 	public static bool open = false;
 
 	void Start () {
-        if (this.gameObject.tag == "Respawn")
-            Door = GameObject.FindGameObjectWithTag("door2");
-        else
-            Door = GameObject.FindGameObjectWithTag("door");
+		Door = GameObject.FindGameObjectWithTag ("door");
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 	}
 

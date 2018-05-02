@@ -13,8 +13,6 @@ TagManager:
   - Level
   - g_box
   - Game
-  - door2
-  - BOX_SPAWN
   layers:
   - Default
   - TransparentFX
