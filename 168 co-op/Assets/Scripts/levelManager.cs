@@ -38,4 +38,9 @@ public class levelManager : MonoBehaviour {
             p.transform.position = position;
         }
     }
+
+    public void exitLevel()
+    {
+        Application.Quit();
+    }
 }
