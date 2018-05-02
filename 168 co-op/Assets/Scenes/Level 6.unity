@@ -2467,9 +2467,28 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114926158266902192, guid: e641edce1228a344889ed7a0b0426458, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e641edce1228a344889ed7a0b0426458, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1637647065 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1884033050338092, guid: e641edce1228a344889ed7a0b0426458,
+    type: 2}
+  m_PrefabInternal: {fileID: 1637647064}
+--- !u!114 &1637647066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1637647065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ecd950ab4a09be4bbbe15526934b747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
+  sprites: []
 --- !u!1 &1785392885
 GameObject:
   m_ObjectHideFlags: 0
@@ -2560,11 +2579,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4912211959616486, guid: 7898ed4aacd8632489d85aa49b4b0ace, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -1.4690495
+      value: -6.93
       objectReference: {fileID: 0}
     - target: {fileID: 4912211959616486, guid: 7898ed4aacd8632489d85aa49b4b0ace, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.4852848
+      value: 4.95
       objectReference: {fileID: 0}
     - target: {fileID: 4912211959616486, guid: 7898ed4aacd8632489d85aa49b4b0ace, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2593,6 +2612,11 @@ Prefab:
     - target: {fileID: 1204784781318272, guid: 7898ed4aacd8632489d85aa49b4b0ace, type: 2}
       propertyPath: m_Name
       value: WoodBox (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 50026330878217906, guid: 7898ed4aacd8632489d85aa49b4b0ace,
+        type: 2}
+      propertyPath: m_BodyType
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7898ed4aacd8632489d85aa49b4b0ace, type: 2}
@@ -2654,6 +2678,8 @@ GameObject:
   - component: {fileID: 2099263918}
   - component: {fileID: 2099263917}
   - component: {fileID: 2099263919}
+  - component: {fileID: 2099263921}
+  - component: {fileID: 2099263920}
   m_Layer: 0
   m_Name: Level 6 door
   m_TagString: door
@@ -2802,5 +2828,77 @@ TilemapCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 1
+  m_Offset: {x: 0, y: 0}
+--- !u!66 &2099263920
+CompositeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2099263915}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_GeometryType: 0
+  m_GenerationType: 0
+  m_EdgeRadius: 0
+  m_ColliderPaths:
+  - m_Collider: {fileID: 2099263919}
+    m_ColliderPaths:
+    - - X: -80142864
+        Y: 30142858
+      - X: -79571432
+        Y: 29857142
+      - X: -70571424
+        Y: 29857142
+      - X: -70142856
+        Y: 30371428
+      - X: -70142856
+        Y: 30142858
+      - X: -69571432
+        Y: 29857142
+      - X: -60571428
+        Y: 29857142
+      - X: -59857144
+        Y: 30714286
+      - X: -59857144
+        Y: 40142860
+      - X: -80142864
+        Y: 40142860
+  m_CompositePaths:
+    m_Paths:
+    - - {x: -7.0142856, y: 3.0371428}
+      - {x: -7.0142856, y: 3.0142858}
+      - {x: -6.9571433, y: 2.9857142}
+      - {x: -6.0571427, y: 2.9857142}
+      - {x: -5.9857144, y: 3.0714285}
+      - {x: -5.9857144, y: 4.014286}
+      - {x: -8.014286, y: 4.014286}
+      - {x: -8.014286, y: 3.0142858}
+      - {x: -7.9571433, y: 2.9857142}
+      - {x: -7.0571423, y: 2.9857142}
+  m_VertexDistance: 0.0005
+--- !u!50 &2099263921
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2099263915}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

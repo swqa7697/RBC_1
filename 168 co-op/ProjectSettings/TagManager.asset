@@ -10,6 +10,9 @@ TagManager:
   - Network
   - box
   - stone_box
+  - Level
+  - g_box
+  - Game
   layers:
   - Default
   - TransparentFX

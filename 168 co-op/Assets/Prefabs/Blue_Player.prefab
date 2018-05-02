@@ -73,7 +73,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1355184977850408}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -9.777343, y: -0.46250844, z: 0}
+  m_LocalPosition: {x: -7.9107146, y: 1.0715239, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4339884286556334}
@@ -252,11 +252,17 @@ MonoBehaviour:
   - {fileID: 21300002, guid: 4a311d7860f518a4f870a1fe4210cde8, type: 3}
   localRed1: {fileID: 21300000, guid: dbfa5ecccfb63bc40b656f7d1d086f0a, type: 3}
   localRed2: {fileID: 21300002, guid: dbfa5ecccfb63bc40b656f7d1d086f0a, type: 3}
+  beingGrabbed: 0
   grounded: 1
   canGrab: 0
   grabbing: 0
+  can_pp: 1
+  pulling: 0
+  can_jump: 1
   rb2db: {fileID: 0}
-  box: {fileID: 0}
+  obj: {fileID: 0}
+  thingToPull: {fileID: 0}
+  originalParent: {fileID: 0}
 --- !u!114 &114381310172406700
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -280,13 +286,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TransformSyncMode: 2
-  m_SendInterval: 0.1
+  m_SendInterval: 0.033333335
   m_SyncRotationAxis: 3
   m_RotationSyncCompression: 0
   m_SyncSpin: 0
   m_MovementTheshold: 0.001
   m_VelocityThreshold: 0.0001
-  m_SnapThreshold: 5
+  m_SnapThreshold: 0.1
   m_InterpolateRotation: 1
   m_InterpolateMovement: 1
 --- !u!114 &114936818557804616
@@ -331,8 +337,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1870965903
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4a311d7860f518a4f870a1fe4210cde8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
