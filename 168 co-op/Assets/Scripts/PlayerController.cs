@@ -140,15 +140,16 @@ public class PlayerController : NetworkBehaviour {
 		if (Input.GetButtonDown ("Grab")) {
 			if (canGrab == true) {
 				grabbing = true;
-                CmdGrab();
-				/*obj.transform.SetParent (gameObject.transform);
-                Debug.Log("Parent: " + obj.transform.parent);
-				//if (obj.CompareTag ("Player")) {
-					//obj.GetComponent<Rigidbody2D>().isKinematic = true;
-					//obj.GetComponent<PlayerController> ().beingGrabbed = true;
-				//}*/
 
-			}
+                obj.transform.SetParent (gameObject.transform);
+                Debug.Log("Parent: " + obj.transform.parent);
+                obj.GetComponent<Rigidbody2D>().isKinematic = true;
+                //if (obj.CompareTag ("Player")) {
+                //obj.GetComponent<Rigidbody2D>().isKinematic = true;
+                //obj.GetComponent<PlayerController> ().beingGrabbed = true;
+                //}*/
+                CmdGrab();
+            }
 		}
 
 		if (Input.GetButtonUp ("Grab")) {
@@ -157,7 +158,7 @@ public class PlayerController : NetworkBehaviour {
             //obj.GetComponent<Rigidbody2D>().isKinematic = false;
             //obj.GetComponent<PlayerController> ().beingGrabbed = false;
             //}
-            //obj.transform.SetParent (null);
+            obj.transform.SetParent (null);
 
             CmdStopGrab();
 		}
@@ -194,7 +195,6 @@ public class PlayerController : NetworkBehaviour {
     {
         obj.transform.SetParent(gameObject.transform);
         Debug.Log("Parent: " + obj.transform.parent);
-        //if (obj.CompareTag ("Player")) {
         obj.GetComponent<Rigidbody2D>().isKinematic = true;
     }
 

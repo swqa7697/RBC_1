@@ -2488,7 +2488,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
-  sprites: []
+  sprites:
+  - {fileID: 21300084, guid: 704539685fd5fdd48ae9f654fe1f86be, type: 3}
+  - {fileID: 21300068, guid: 704539685fd5fdd48ae9f654fe1f86be, type: 3}
 --- !u!1 &1785392885
 GameObject:
   m_ObjectHideFlags: 0
